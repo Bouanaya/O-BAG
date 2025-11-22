@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import Promotion from "@/components/Promotion";
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -24,6 +25,8 @@ export default function RootLayout({
       <body
         className={`${montserrat.variable}`}
       >
+        
+        <Promotion />
         <Header />
         <main className="flex-1">{children}</main>
         <footer />
