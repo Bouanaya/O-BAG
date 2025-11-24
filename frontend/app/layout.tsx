@@ -3,7 +3,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { log } from "node:console";
+
 
 
 const montserrat = Montserrat({
@@ -15,6 +15,18 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "O-BAG ",
   description: "Online Bag Store ",
+  openGraph: {
+     title: "Mon site",
+     description: "Bienvenue sur mon site",
+     images: [
+       {
+         url: "/ImageHome/ob.png", // هنا دير صورتك
+         width: 1200,
+         height: 630,
+       },
+     ],
+   },
+  
 };
 
 export default function RootLayout({

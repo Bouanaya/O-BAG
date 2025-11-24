@@ -1,5 +1,7 @@
 import { CarouselHome } from "@/components/CarouselHome";
+import CreateHero from "@/components/CreateHero";
 import Magento from "@/components/Magento";
+import MonthlyBags from "@/components/MonthlyBags";
 import Poignees from "@/components/Poignees";
 import ProductList from "@/components/ProductList";
 
@@ -10,6 +12,8 @@ const Page = () => {
       <CarouselHome />
       <Poignees />
       <ProductList />
+      <CreateHero />
+      <MonthlyBags />
     </div>
   );
 };
