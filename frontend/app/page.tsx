@@ -1,6 +1,7 @@
 import { CarouselHome } from "@/components/CarouselHome";
 import Magento from "@/components/Magento";
 import Poignees from "@/components/Poignees";
+import ProductList from "@/components/ProductList";
 
 const Page = () => {
   return (
@@ -8,6 +9,7 @@ const Page = () => {
       <Magento />
       <CarouselHome />
       <Poignees />
+      <ProductList />
     </div>
   );
 };

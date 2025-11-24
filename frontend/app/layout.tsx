@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { log } from "node:console";
 
 
 const montserrat = Montserrat({
@@ -20,6 +22,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+ 
   return (
     <html lang="en">
       <body
@@ -27,7 +30,7 @@ export default function RootLayout({
       >
         <Header />
         <main className="flex-1">{children}</main>
-        <footer />
+        <Footer />
       </body>
     </html>
   );
