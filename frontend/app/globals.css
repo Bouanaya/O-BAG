@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "remixicon/fonts/remixicon.css";
 :root {
      --font-montserrat: "Montserrat", sans-serif;
     --background: oklch(1 0 0);
@@ -186,14 +187,14 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --background: #0a0a0a;
-        --foreground: #ededed;
+        --foreground: #ffff;
     }
 }
 
 
 
 body {
-    background: var(--background);
-    color: var(--foreground);
+    background: var(--foreground);
+    color: var(--background);
      font-family: var(--font-montserrat);
 }
