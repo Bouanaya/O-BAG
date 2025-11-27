@@ -1,0 +1,91 @@
+[
+  {
+    "id": 1,
+    "title": "O clock great | strap blue smoke",
+    "category": "montres",
+    "price": 56,
+    "oldPrice": null,
+    "discount": null,
+    "image": "https://cdn2.obag.it/rx/q_100,w_1920,ofmt_webp/media/catalog/product/2/7/2789fe0ea742ac078ea6a08f0e65a480.png"
+  },
+  {
+    "id": 2,
+    "title": "O clock great | grey smoke dial",
+    "category": "montres",
+    "price": 180,
+    "oldPrice": 210,
+    "discount": "-10%",
+    "image": "https://cdn2.obag.it/rx/q_100,w_1920,ofmt_webp/media/catalog/product/6/8/6872afc22b3b22485345a3a6ff1d0875.png"
+  },
+  {
+    "id": 3,
+    "title": "O clock great | chronometer grey",
+    "category": "montres",
+    "price": 210,
+    "oldPrice": null,
+    "discount": null,
+    "image": "https://cdn2.obag.it/rx/q_100,w_1920,ofmt_webp/media/catalog/product/o/c/oclksr01_sis01_059_notag_unica_l2_1.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Backpack Classic",
+    "category": "sacs à dos",
+    "price": 90,
+    "oldPrice": 120,
+    "discount": "-25%",
+    "image": "https://cdn2.obag.it/media/catalog/product/o/b/obagzp04_tes20_615_notag_unica_l2.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Traveler Backpack",
+    "category": "sacs à dos",
+    "price": 110,
+    "oldPrice": 130,
+    "discount": "-15%",
+    "image": "https://cdn2.obag.it/rx/q_100,w_1920,ofmt_webp/media/catalog/product/o/b/obagzp04_tes20_055_notag_unica_l2.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Slim Wallet Black",
+    "category": "accessoires",
+    "price": 35,
+    "oldPrice": null,
+    "discount": null,
+    "image": "https://cdn2.obag.it/rx/q_100,w_1920,ofmt_webp/media/catalog/product/w/l/wlltc515_ecsc2_044_notag_unica_l2.jpg"
+  },
+  {
+    "id": 14,
+    "title": "Silver Bracelet",
+    "category": "accessoires",
+    "price": 45,
+    "oldPrice": 53,
+    "discount": "-15%",
+    "image": "https://cdn2.obag.it/rx/q_100,w_1920,ofmt_webp/media/catalog/product/w/l/wlltc211_ecsc2_924_notag_unica_l2.jpg"
+  },
+  {
+    "id": 15,
+    "title": "Slip-On Comfort Shoes",
+    "category": "chaussures",
+    "price": 75,
+    "oldPrice": 95,
+    "discount": "-20%",
+    "image": "https://cdn2.obag.it/rx/q_100,w_1920,ofmt_webp/media/catalog/product/o/s/oshsd001_evs00_750_notag_unica_l1.jpg"
+  },
+  {
+    "id": 16,
+    "title": "Slip-On Comfort Shoes",
+    "category": "chaussures",
+    "price": 75,
+    "oldPrice": 95,
+    "discount": "-20%",
+    "image": "https://cdn2.obag.it/rx/q_100,w_1920,ofmt_webp/media/catalog/product/O/S/OSHSD101_EVS00_587_L1.jpg"
+  },
+  {    "id": 17,
+    "title": "Slip-On Comfort Shoes",
+    "category": "chaussures",
+    "price": 75,
+    "oldPrice": 95,
+    "discount": "-20%",
+    "image": "https://cdn2.obag.it/rx/q_100,w_1920,ofmt_webp/media/catalog/product/o/s/osnkr040_ecsr5_74a_notag_unica_l1.jpg"
+  }
+]
