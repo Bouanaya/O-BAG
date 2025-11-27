@@ -8,7 +8,7 @@ import NewsletterBags from "@/components/HeroSection/NewsletterSection";
 
 const Page = () => {
   return (
-    <div className="relative mt-28 bg-white ">
+    <div className="relative  bg-white ">
       <Magento />
       <CarouselHome />
       <Poignees />
