@@ -9,16 +9,33 @@ export interface MaterialColor {
 }
 
 export interface Product {
-  id: number;
-  name: string;
-  price: number;
-  oldPrice?: number;
+  _id?: string; // MongoDB automatic ID (optional on create)
+
+  title: string;
+  description: string;
+  size: string;
   color: string;
-  image: string;
-  sale: boolean;
-  saleValue: number;
+  price: number;
+  oldPrice: number;
   discount: number;
+  model: string;
+  material: string;
+  dimensions: string;
+  weight: string;
+  sku: string;
+  image: string;
+
+  materialInfo: string;
+  zippers: string;
+  handles: string;
+  exteriorPockets: string;
+  backpackStraps: string;
+  mainCompartment: string;
+  zippedCompartment: string;
 }
+
+
+
 
 export interface FilterState {
   category: string;

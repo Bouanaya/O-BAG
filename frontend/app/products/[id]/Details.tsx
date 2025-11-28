@@ -6,16 +6,13 @@ import { fetchProduct } from "@/lib/fetchProduct";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import DetailRow from "./DetailRow";
+import { Product } from "@/types";
 
 interface DetailsProps {
-  id: number;
+  id: string;
 }
 
-interface Product {
-  id: number;
-  title: string;
-  description: string;
-}
+
 
 export default function Details({ id }: DetailsProps) {
   const [product, setProduct] = useState<Product | null>(null);
@@ -35,6 +32,9 @@ export default function Details({ id }: DetailsProps) {
   useEffect(() => {
     fetchProduct(id).then((res) => setProduct(res));
   }, [id]);
+
+  console.log(product);
+  
 
   const handleAddToCart = () => {
     console.log("Added to cart:", { size: selectedSize, color: selectedColor });
@@ -68,7 +68,7 @@ export default function Details({ id }: DetailsProps) {
           <ChevronRight className="w-4 h-4" />
           <Link href="/products" className="hover:underline">Products</Link>
           <ChevronRight className="w-4 h-4" />
-          <Link href={`/products/${product.id}`} className="opacity-70">{product.id}</Link>
+          <Link href={`/products/${product.title}`} className="opacity-70">{product.title}</Link>
         </nav>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
@@ -108,7 +108,7 @@ export default function Details({ id }: DetailsProps) {
 
             {/* Price + Add to Cart */}
             <div className="flex items-center space-x-4 pt-4">
-              <span className="text-white text-3xl font-bold">$ 250</span>
+              <span className="text-white text-3xl font-bold">$ {product.price}</span>
               
             </div>
 
