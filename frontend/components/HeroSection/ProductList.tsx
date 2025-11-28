@@ -9,15 +9,14 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
+import { fetchoneProduct } from "@/lib/fetchProduct";
 
 const CarouselProducts: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [selected, setSelected] = useState<string>("new");
 
   useEffect(() => {
-    fetch("/products.json")
-      .then((res) => res.json())
-      .then((data: Product[]) => setProducts(data));
+    fetchoneProduct().then((data) => setProducts(data));
   }, []);
 
   // Filter products

@@ -20,7 +20,7 @@ const ProductCard: React.FC<Props> = ({ product }) => {
     <div className="bg-white p-4 h-80 relative shadow-sm cursor-pointer">
       {product.discount && (
         <span className="absolute right-4 top-4 bg-yellow-400 text-xs px-2 py-1 font-semibold">
-          {product.discount}
+          {product.discount}%
         </span>
       )}
 

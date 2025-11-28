@@ -134,7 +134,7 @@ export default function Details({ id }: DetailsProps) {
                 onClick={handleAddToCart}
                 className="flex items-center space-x-2 bg-white text-gray-800 px-8 py-2 cursor-pointer rounded-full font-medium hover:bg-gray-100 transition-all shadow-lg"
               >
-                Add to cart <ShoppingCart className="w-5 h-5 mx-3" />
+                Ajouter au panier <ShoppingCart className="w-5 h-5 mx-3" />
               </button>
             
             </div>
@@ -145,9 +145,9 @@ export default function Details({ id }: DetailsProps) {
             
             <div className="flex justify-center ">
               <img
-                src="/ImageHome/ob3.png"
+                src={product.image}
                 alt={product.title}
-                className="w-[400px] drop-shadow-2xl"
+                className="w-[400px] drop-shadow-2xl rounded-2xl"
               />
             </div>
           </div>
@@ -157,7 +157,7 @@ export default function Details({ id }: DetailsProps) {
       
       
       
-      <div id="product-details" ref={detailsRef} className="mt-20 bg-white   overflow-hidden">
+      <div id="product-details" ref={detailsRef} className="mt-20 bg-white    overflow-hidden">
                <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
                  {/* Left - Details Info */}
                  <div className="p-12">
@@ -184,12 +184,16 @@ export default function Details({ id }: DetailsProps) {
                  </div>
      
                  {/* Right - Product Image */}
-                 <div className="bg-gray-50 p-12 flex items-center justify-center">
-                   <img
-                     src={product.detailImage || product.image || "/api/placeholder/400/600"}
-                     alt={`${product.title} - Detail view`}
-                     className="w-full h-auto max-w-md object-cover"
-                   />
+                 <div className="bg-gray-50 p-12 flex flex-col items-center ">
+                   
+                     {product.detailImages ? product.detailImages.map((url:string) => (
+                       <Link href={url} target="_blank">
+                         <img src={url} alt="Product Image" className="w-80 h-auto " />
+                       </Link>
+                     )): <img src={product.image} alt="Product Image" className="w-full h-auto" />
+              }
+                 
+              
                  </div>
                </div>
              </div>

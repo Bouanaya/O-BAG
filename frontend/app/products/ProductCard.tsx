@@ -8,7 +8,7 @@ interface ProductCardProps {
 export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   return (
     <Link href={`/products/${product._id}`}>
-      <div className="cursor-pointer rounded-xl p-4 shadow hover:shadow-lg transition relative">
+      <div className="cursor-pointer  p-4 shadow hover:shadow-sm transition relative">
         {product.discount && (
           <span className="absolute top-2 right-2 bg-red-500 text-white z-10 text-xs px-2 py-1 rounded">
             -{product.discount}%

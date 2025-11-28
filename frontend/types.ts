@@ -32,6 +32,7 @@ export interface Product {
   backpackStraps: string;
   mainCompartment: string;
   zippedCompartment: string;
+  detailImage: string[];
 }
 
 
