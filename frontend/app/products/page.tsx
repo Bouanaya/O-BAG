@@ -14,7 +14,9 @@ const ProductCatalog: React.FC = () => {
   });
 
   const handleFilterChange = (newFilters: FilterState) => {
+    
     setFilters(newFilters);
+    console.log("hello",newFilters);
   };
 
   return (

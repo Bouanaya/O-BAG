@@ -186,8 +186,8 @@ export default function Details({ id }: DetailsProps) {
                  {/* Right - Product Image */}
                  <div className="bg-gray-50 p-12 flex flex-col items-center ">
                    
-                     {product.detailImages ? product.detailImages.map((url:string) => (
-                       <Link href={url} target="_blank">
+                     {product.detailImages ? product.detailImages.map((url:string,index:number) => (
+                       <Link href={url} target="_blank" key={index}>
                          <img src={url} alt="Product Image" className="w-80 h-auto " />
                        </Link>
                      )): <img src={product.image} alt="Product Image" className="w-full h-auto" />

@@ -9,7 +9,6 @@ export const AsideFilter: React.FC<AsideFilterProps> = ({ onFilterChange }) => {
 
   const categories: Category[] = [
   
-    { name: 'Sacs', count: 123 },
     { name: 'Sacs à dos', count: 154 },
     { name: 'Montres', count: 76 },
     { name: 'Accessoires', count: 34 },
@@ -39,6 +38,7 @@ export const AsideFilter: React.FC<AsideFilterProps> = ({ onFilterChange }) => {
   }, []);
 
   const handleCategoryClick = (categoryName: string): void => {
+    console.log(`Category clicked: ${categoryName}`);
     setSelectedCategory(categoryName);
   };
 

@@ -23,10 +23,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           />
         </div>
 
-        <h3 className="text-lg font-semibold">{product.title}</h3>
+        <h3 className="text-sm text-center font-semibold">{product.title}</h3>
 
-        <div className="flex items-center gap-2 mt-1">
-          <span className="text-xl font-bold">{product.price}€</span>
+        <div className="flex items-center gap-2 mt-1 justify-center">
+          <span className="text-sm font-bold">{product.price}€</span>
           {product.oldPrice && (
             <span className="line-through text-gray-500">
               {product.oldPrice}€

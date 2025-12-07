@@ -6,7 +6,7 @@ async function bootstrap() {
 
   // Enable CORS for your frontend
   app.enableCors({
-    origin: 'http://localhost:3001', // URL dyal frontend
+    origin: ['http://localhost:3001',"http://localhost:5173"], // URL dyal frontend
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
     credentials: true, // ila kayn cookies/auth
   });

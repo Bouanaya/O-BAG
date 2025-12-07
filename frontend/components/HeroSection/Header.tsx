@@ -4,7 +4,6 @@ import { useState } from "react";
 import {
   Menu,
   Search,
-  ShoppingCart,
   ChevronDown,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -25,7 +24,7 @@ import {
 import Promotion from "./Promotion";
 import Link from "next/link";
 
-export default function Header() {
+    export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
@@ -186,9 +185,9 @@ export default function Header() {
             <Button
               variant="ghost"
               size="icon"
-              className="hover:bg-white/10 text-white relative cursor-pointer"
+              className="bg-white text-white relative cursor-pointer"
             >
-              <ShoppingCart className="w-5 h-5" />
+              <img src="https://cdn2.obag.it/media/catalog/category/obag.png" alt="Cart" className="w-8 h-8" />
             </Button>
           </div>
         </div>

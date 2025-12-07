@@ -5,6 +5,7 @@ const productLayout = ({
 }> ) => {
   return (
     <div>
+      
       {children}
     </div>
   );

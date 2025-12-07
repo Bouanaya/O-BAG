@@ -33,7 +33,7 @@ const CarouselProducts: React.FC = () => {
       {/* Carousel */}
       <Carousel className="w-full overflow-x-hidden p-10 ">
         <CarouselContent className="-ml-1">
-          {filtered.map((product) => (
+          {filtered.map((product,inedex) => (
             <CarouselItem
               key={product.id}
               className="pl-1 md:basis-1/2 lg:basis-1/4 "

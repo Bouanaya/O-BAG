@@ -1,23 +1,27 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { use, useEffect, useState } from "react";
 import { ChevronDown } from "lucide-react";
-import { Product, FilterState } from "@/types";
+//import { Product, FilterState } from "@/types";
 import { ProductCard } from "./ProductCard";
 import { fetchoneProduct } from "@/lib/fetchProduct";
+import  useProducts from "@/hooks/useGetProducts";
 
 interface ProductsProps {
   filters: FilterState;
 }
 
-export const Products: React.FC<ProductsProps> = ({ filters }) => {
-  const [allProducts, setProducts] = useState<Product[]>([]);
+export const Products: React.FC<ProductsProps> = async({ filters }) => {
+ // const [allProducts, setProducts] = useState<Product[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 12;
 
-  useEffect(() => {
-    fetchoneProduct().then((res) => setProducts(res));
-  }, []);
+  
+  const allProducts = await fetchoneProduct()
+    
+
+
+
 
   const filteredProducts = allProducts.filter((product) => {
     const withinPriceRange =
