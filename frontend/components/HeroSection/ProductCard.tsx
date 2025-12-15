@@ -1,49 +1,73 @@
 import React from "react";
+import { Handbag, Heart } from "lucide-react";
+import useCounterStore from "@/store/useCounterStore";
 
+const ProductCard = ({ product }: any) => {
+  const { incrementFav, incrementCart } = useCounterStore();
 
-export interface Product {
-  id: number;
-  title: string;
-  category: string;
-  price: number;
-  oldPrice: number | null;
-  discount: string | null;
-  image: string;
-}
-
-interface Props {
-  product: Product;
-}
-
-const ProductCard: React.FC<Props> = ({ product }) => {
   return (
-    <div className="bg-white p-4 h-80 relative shadow-sm cursor-pointer">
-      {product.discount && (
-        <span className="absolute right-4 top-4 bg-yellow-400 text-xs px-2 py-1 font-semibold">
-          {product.discount}%
-        </span>
-      )}
+    <div className="group relative bg-white p-4 shadow-sm cursor-pointer overflow-hidden">
 
-      <img
-        src={product.image}
-        alt={product.title}
-        className="mx-auto h-40 object-contain"
-      />
+      {/* Image */}
+      <div className="relative flex items-center justify-center h-56">
+        <img
+          src={product.image}
+          alt={product.title}
+          className="h-40 object-contain transition-all duration-500 ease-out group-hover:scale-125"
+        />
 
-      <h3 className="mt-4 text-center text-lg font-medium text-slate-500">
+        {/* Premium Icons */}
+        <div className="absolute space-y-4 top-0 gap-4 translate-y-6 opacity-0 transition-all duration-300 ease-out group-hover:translate-y-0 group-hover:opacity-100 right-0">
+          
+          {/* Heart */}
+          <button
+            onClick={incrementFav}
+            className="
+              w-12 h-12 rounded-full
+              bg-white/70 backdrop-blur-md
+              shadow-lg
+              cursor-pointer
+              flex items-center justify-center
+              transition-all duration-300
+              hover:scale-110 hover:bg-red-500
+              hover:text-white
+            "
+          >
+            <Heart className="w-5 h-5" />
+          </button>
+
+          {/* Shop */}
+          <button
+            onClick={incrementCart}
+            className="
+              w-12 h-12 rounded-full
+              bg-black text-white
+              cursor-pointer
+              shadow-lg
+              flex items-center justify-center
+              transition-all duration-300
+              hover:scale-110 hover:bg-gray-800
+            "
+          >
+            <Handbag className="w-5 h-5" />
+          </button>
+
+        </div>
+      </div>
+
+      {/* Title */}
+      <h3 className="mt-4 text-center text-lg font-medium text-slate-600 group-hover:text-black transition-colors">
         {product.title}
       </h3>
 
-      <div className="flex justify-center gap-5 mt-5  text-xl">
+      {/* Price */}
+      <div className="flex justify-center gap-4 mt-3 text-lg">
         {product.oldPrice && (
           <span className="line-through text-red-400">
             ${product.oldPrice}
           </span>
         )}
-        <span className="font-semibold text-black">
-          ${product.price}
-        </span>
-       
+        <span className="font-semibold text-black">${product.price}</span>
       </div>
     </div>
   );

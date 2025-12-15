@@ -1,11 +1,6 @@
 "use client";
-
 import { useState } from "react";
-import {
-  Menu,
-  Search,
-  ChevronDown,
-} from "lucide-react";
+import { Menu, Search, ChevronDown, Heart, Handbag } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -23,13 +18,15 @@ import {
 } from "@/components/ui/sheet";
 import Promotion from "./Promotion";
 import Link from "next/link";
+import useCounterStore from "@/store/useCounterStore";
 
-    export default function Header() {
+export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   const closeMenu = () => setIsMenuOpen(false);
   const closeSearch = () => setIsSearchOpen(false);
+  const { cart, favorites, incrementCart, incrementFav } = useCounterStore();
 
   return (
     <header className="w-full bg-[#50211E] text-white fixed top-0 left-0 z-50">
@@ -182,13 +179,33 @@ import Link from "next/link";
             </Sheet>
 
             {/* Cart */}
-            <Button
-              variant="ghost"
-              size="icon"
-              className="bg-white text-white relative cursor-pointer"
-            >
-              <img src="https://cdn2.obag.it/media/catalog/category/obag.png" alt="Cart" className="w-8 h-8" />
-            </Button>
+            <div className="flex gap-4 items-center">
+              {/* Heart / Favorites */}
+              <button
+                onClick={incrementFav}
+                className="relative w-10 h-10 flex items-center justify-center rounded-full bg-black  hover:text-white transition-all"
+              >
+                <Heart className="w-5 h-5" />
+                {favorites > 0 && (
+                  <span className="absolute -top-1 -right-1 text-xs w-4 h-4 rounded-full text-white bg-red-300 flex items-center justify-center">
+                    {favorites}
+                  </span>
+                )}
+              </button>
+
+              {/* Cart */}
+              <button
+                onClick={incrementCart}
+                className="relative w-10 h-10 flex items-center justify-center rounded-full bg-black   shadow hover:bg-black hover:text-white transition-all"
+              >
+                <Handbag className="w-5 h-5" />
+                {cart > 0 && (
+                  <span className="absolute -top-1 -right-1 text-xs w-4 h-4 rounded-full bg-red-100 text-white flex items-center justify-center">
+                    {cart}
+                  </span>
+                )}
+              </button>
+            </div>
           </div>
         </div>
       </div>
